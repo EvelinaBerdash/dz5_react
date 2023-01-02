@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { nanoid } from 'nanoid'
 
 export function ChatList({ onAddChat, chats }) {
-    const [value, setValue] = useState()
+    const [value, setValue] = useState('')
 
     const handleChange = (e) => {
         setValue(e.target.value)
@@ -36,7 +36,7 @@ export function ChatList({ onAddChat, chats }) {
                     value={value}
                     onChange={handleChange}
                 />
-                <button type='submit'>Create Chat</button>
+                <button type="submit">Create Chat</button>
             </form>
         </>
 

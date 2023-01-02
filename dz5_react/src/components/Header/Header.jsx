@@ -1,5 +1,7 @@
 import { Outlet, Link, NavLink } from 'react-router-dom'
 
+import { useSelector } from 'react-redux'
+
 import styles from './Header.module.css'
 
 export const navigate = [
@@ -21,6 +23,9 @@ export const navigate = [
 ]
 
 export function Header() {
+
+    const name = useSelector((store) => store.name)
+
     return (
         <>
             <header>
@@ -39,6 +44,7 @@ export function Header() {
                             </li>
                         ))}
                     </ul>
+                    <p>{name}</p>
                 </nav>
             </header>
             <main>
