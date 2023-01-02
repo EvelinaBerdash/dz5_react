@@ -28,10 +28,10 @@ export function Form({ addMessage }) {
                     onChange={(event) => setText(event.target.value)}
                 />
                 {/* <Button type="submit">Add message</Button> */}
-                <IButton 
-                    variant='contained' 
-                    color='success' 
-                    size='small' 
+                <IButton
+                    variant='contained'
+                    color='success'
+                    size='small'
                     type="submit"
                 >
                     Add message
@@ -39,4 +39,8 @@ export function Form({ addMessage }) {
             </form>
         </>
     )
+}
+
+Form.propTypes = {
+    addMessage: PropTypes.func
 }
